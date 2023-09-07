@@ -139,6 +139,43 @@ la matriz $GLOBALS o del modificador global de PHP.</p>
     echo "b: $b<br>"; // b: 7
     echo "c: $c<br>"; // c: 9000
     ?>
+    <h2>Ejercicio 6</h2>
+    <p>Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f y muéstralas
+usando la función var_dump(<datos>).
+Después investiga una función de PHP que permita transformar el valor booleano de $c y $e
+en uno que se pueda mostrar con un echo:</p>
+
+<?php
+
+$a = "0";
+$b = "TRUE";
+$c = FALSE;
+$d = ($a OR $b);
+$e = ($a AND $c);
+$f = ($a XOR $b);
+
+var_dump($a); // string(1) "0"
+echo '<br>';
+var_dump($b); // string(4) "TRUE"
+echo '<br>';
+var_dump($c); // bool(false)
+echo '<br>';
+var_dump($d); // bool(true)
+echo '<br>';
+var_dump($e); // bool(false)
+echo '<br>';
+var_dump($f); // bool(true)
+echo '<br>';
+echo '<br>';
+echo 'Convertir $c y $e en valores que se pueden mostrar con echo';
+$c = (int)$c; // Convertir a entero
+$e = (int)$e; // Convertir a entero
+echo '<br>';
+echo "c: $c<br>"; // c: 0
+echo "e: $e<br>"; // e: 0
+
+
+?>
 
    
 
