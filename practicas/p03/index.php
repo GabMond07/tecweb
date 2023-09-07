@@ -98,6 +98,30 @@ arreglo):</p>
             print_r ($z);
         echo '</ul>';
     ?>
+     <h2>Ejercicio 4</h2>
+    <p>Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de
+la matriz $GLOBALS o del modificador global de PHP.</p>
+    <?php
+    function test2() {  
+         echo '<ul>';
+             echo $GLOBALS['a'];
+             echo '</br>';
+             echo print_r($GLOBALS['z']);
+             echo '</br>';
+             echo $GLOBALS['b'];
+             echo '</br>';
+             echo print_r ($GLOBALS['c']);
+             echo '</br>';
+             echo $GLOBALS['a'];
+             echo '</br>';
+             echo print_r($GLOBALS['b']);
+             echo '</br>';
+             echo print_r($GLOBALS['z']);
+         echo '</ul>';
+    }
+    test2();
+    ?>
+
    
 
 
