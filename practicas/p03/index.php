@@ -173,10 +173,24 @@ $e = (int)$e; // Convertir a entero
 echo '<br>';
 echo "c: $c<br>"; // c: 0
 echo "e: $e<br>"; // e: 0
+?>
+
+<h2>Ejercicio 7</h2>
+<p>Usando la variable predefinida $_SERVER, determina lo siguiente:</p>
+<?php
+
+echo "Versión de Apache: " . $_SERVER['SERVER_SOFTWARE'] . "<br>";
+echo '<br>';
+echo "Versión de PHP: " . phpversion() . "<br>";
+echo '<br>';
+echo "Nombre del sistema operativo: " . php_uname('s') . "<br>";
+echo '<br>';
+echo "Idioma del navegador: " . $_SERVER['HTTP_ACCEPT_LANGUAGE'] . "<br>";
+
+
 
 
 ?>
-
    
 
 
