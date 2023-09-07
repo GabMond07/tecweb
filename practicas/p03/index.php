@@ -33,6 +33,7 @@
         <li>$c = &$a;</li>
     </ul>
     <?php
+    function test1(){    
     $a = 'ManejadorSQL';
     $b = 'MySQL';
     $c = &$a;
@@ -55,9 +56,49 @@
         echo '<li>', $b ,'</li>';
     echo '</ul>';
     echo 'Se mostró la nueva asignación de las variables, la cúal la variable $b se le asignó $a';
+    }
+
+    test1();
+    
     ?>
-
-
+    <h2>Ejercicio 3</h2>
+    <p>Muestra el contenido de cada variable inmediatamente después de cada asignación,
+verificar la evolución del tipo de estas variables (imprime todos los componentes de los
+arreglo):</p>
+    <ul>
+        <li> $a = “PHP5”;</li>
+        <li> $z[] = &$a;</li>
+        <li> $b = “5a version de PHP”;</li>
+        <li> $c = $b*10;</li>
+        <li> $a .= $b;</li>
+        <li> $b *= $c;</li>
+        <li> $z[0] = “MySQL”;</li>
+    </ul>
+    <?php
+        $a = 'PHP5';
+        $z[] = &$a;
+        $b = '5a version de PHP';
+        @$c = $b*10;
+        $a .= $b;
+        @$b *= $c;
+        $z[0] = 'MySQL';     
+        echo '<ul>';
+            echo ($a);
+            echo '</br>';
+            echo print_r ($z);
+            echo '</br>';
+            print_r ($b);
+            echo '</br>';
+            print_r ($c);
+            echo '</br>';
+            echo ($a);
+            echo '</br>';
+            print_r ($b);
+            echo '</br>';
+            print_r ($z);
+        echo '</ul>';
+    ?>
+   
 
 
 
