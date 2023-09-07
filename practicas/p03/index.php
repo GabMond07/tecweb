@@ -121,6 +121,24 @@ la matriz $GLOBALS o del modificador global de PHP.</p>
     }
     test2();
     ?>
+    <h2>Ejercicio 5</h2>
+    <p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
+    <ul>
+        <li>$a = “7 personas”;</li>
+        <li>$b = (integer) $a;</li>
+        <li>$a = “9E3”;</li>
+        <li>$c = (double) $a;</li>
+    </ul>
+    <?php
+    $a = "7 personas";
+    $b = (integer)$a;
+    $a = "9E3";
+    $c = (double)$a;
+
+    echo "a: $a<br>"; // a: 9E3
+    echo "b: $b<br>"; // b: 7
+    echo "c: $c<br>"; // c: 9000
+    ?>
 
    
 
