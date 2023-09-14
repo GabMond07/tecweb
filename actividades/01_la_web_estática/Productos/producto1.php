@@ -12,7 +12,7 @@
   <body>
   <nav class="navbarm">
     <nav class="navbar navbar-expand navbar-light bg-faded">
-    <i class="fa-solid fa-house"><a class="navbar-brand" href="#">home</a></i>
+    <i class="fa-solid fa-house"><a class="navbar-brand" href="index.php">home</a></i>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categoría</a>
