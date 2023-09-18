@@ -31,4 +31,20 @@ function generarSecuencia($secuencia_deseada) {
     }
 }
 
+// Función para encontrar el primer número entero múltiplo de un número dado
+function encontrarMultiplo($numero_dado) {
+    $encontrado = false;
+    $aleatorio = 0;
+
+    while (!$encontrado) {
+        $aleatorio = rand(1, 1000);
+        if ($aleatorio % $numero_dado == 0) {
+            $encontrado = true;
+        }
+    }
+
+    return $aleatorio;
+}
+
+
 ?>
