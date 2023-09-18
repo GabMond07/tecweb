@@ -12,17 +12,39 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-
   <?php
+
     // Incluir el archivo de funciones
     include('p03_funciones.php');
 
     // Prueba de la función para comprobar si un número es múltiplo de 5 y 7
-    $numero1 = 10;
-    echo "¿$numero1 es múltiplo de 5 y 7? " . (esMultiploDe5Y7($numero1) ? "Sí" : "No") . "<br>";
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['numero'])) {
+      $numero = $_POST['numero'];
+      if (esMultiploDe5Y7($numero)) {
+          echo "$numero es múltiplo de 5 y 7.";
+      } else {
+          echo "$numero no es múltiplo de 5 y 7.";
+      }
+  }
 
-    // Prueba de la función para generar números aleatorios hasta obtener una secuencia deseada
-    $filas = 4; // Cambiar el número de filas según sea necesario
+  if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['numero'])) {
+      $numero = $_GET['numero'];
+      if (esMultiploDe5Y7($numero)) {
+          echo "$numero es múltiplo de 5 y 7.";
+      } else {
+          echo "$numero no es múltiplo de 5 y 7.";
+      }
+  }
+  ?>
+
+  <h2>Inserta un número</h2>
+  <form method="post">
+      Número: <input type="number" name="numero">
+      <input type="submit" value="Comprobar">
+  </form>
+
+  <?php
+    $filas = 4; 
     list($matriz, $iteraciones, $numerosGenerados) = generarSecuencia($filas);
 
     echo "<p>Matriz generada:</p>";
@@ -41,8 +63,23 @@
     
 
     // Prueba de la función para encontrar el primer número entero múltiplo de un número dado
-    $numero2 = 7;
-    echo "El primer número entero múltiplo de $numero2 es: " . encontrarMultiplo($numero2) . "<br>";
+   
+    if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['numero'])) {
+      $numeroDado = $_GET['numero'];
+      $primerMultiplo = encontrarPrimerMultiplo($numeroDado);
+      echo "El primer número entero múltiplo de $numeroDado es: $primerMultiplo";
+  }
+  ?>
+  
+
+  <h2>Encontrar Primer Múltiplo</h2>
+  <form method="get">
+      Número para encontrar múltiplo: <input type="number" name="numero">
+      <input type="submit" value="Encontrar">
+  </form>
+
+<?php
+
 
     // Prueba de la función para crear un arreglo con letras de la 'a' a la 'z'
     $letras = crearArregloLetras();
@@ -53,24 +90,30 @@
     echo "</table><br>";
 
     // Prueba de la función para identificar una persona por edad y sexo
-    if (isset($_POST['edad']) && isset($_POST['sexo'])) {
+ ?>
+       <h2>Identificación de Persona</h2>
+    <form method="post" action="index.php">
+        Edad: <input type="number" name="edad" required><br>
+        Sexo:
+        <select name="sexo" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select><br>
+        <input type="submit" value="Identificar">
+    </form>
+
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $edad = $_POST['edad'];
         $sexo = $_POST['sexo'];
-        echo identificarPersona($edad, $sexo);
+
+        if ($sexo === 'femenino' && $edad >= 18 && $edad <= 35) {
+            echo "Bienvenida, usted está en el rango de edad permitido.";
+        } else {
+            echo "Lo siento, no cumple con los requisitos.";
+        }
     }
     ?>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       
