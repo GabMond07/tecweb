@@ -10,26 +10,33 @@ function esMultiploDe5Y7($numero) {
 
 
 // Función para generar números aleatorios hasta obtener una secuencia deseada
-function generarSecuencia($secuencia_deseada) {
+
+
+function generarSecuencia($filas) {
     $matriz = array();
     $iteraciones = 0;
+    $numerosGenerados = 0;
 
-    while (true) {
-        $numeros = array();
+    while ($numerosGenerados < $filas * 3) {
+        $secuencia = array();
+        
+        while (count($secuencia) < 3) {
+            $numero = rand(1, 1000); // Generar números aleatorios del 1 al 1000
+            $secuencia[] = $numero;
+            $numerosGenerados++;
 
-        for ($i = 0; $i < 3; $i++) {
-            $numero = rand(1, 1000);
-            $numeros[] = $numero;
+            // Verificar si la secuencia actual es impar, par, impar
+            if (count($secuencia) == 3 && $secuencia[0] % 2 != 0 && $secuencia[1] % 2 == 0 && $secuencia[2] % 2 != 0) {
+                $matriz[] = $secuencia;
+            }
         }
-
-        if ($numeros == $secuencia_deseada) {
-            return array('matriz' => $matriz, 'iteraciones' => $iteraciones);
-        }
-
-        $matriz[] = $numeros;
         $iteraciones++;
     }
+
+    return array($matriz, $iteraciones, $numerosGenerados);
 }
+
+
 
 // Función para encontrar el primer número entero múltiplo de un número dado
 function encontrarMultiplo($numero_dado) {
