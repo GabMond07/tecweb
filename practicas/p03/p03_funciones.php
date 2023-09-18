@@ -46,5 +46,14 @@ function encontrarMultiplo($numero_dado) {
     return $aleatorio;
 }
 
+// Función para crear un arreglo con letras de la 'a' a la 'z'
+function crearArregloLetras() {
+    $letras = array();
+    for ($i = 97; $i <= 122; $i++) {
+        $letras[$i] = chr($i);
+    }
+    return $letras;
+}
+
 
 ?>
