@@ -91,30 +91,17 @@
 
     // Prueba de la función para identificar una persona por edad y sexo
  ?>
-       <h2>Identificación de Persona</h2>
-    <form method="post" action="index.php">
+
+<h2>Formulario de Identificación</h2>
+    <form method="post" action="Respuesta.php">
         Edad: <input type="number" name="edad" required><br>
         Sexo:
         <select name="sexo" required>
             <option value="masculino">Masculino</option>
             <option value="femenino">Femenino</option>
         </select><br>
-        <input type="submit" value="Identificar">
+        <input type="submit" value="Enviar">
     </form>
-
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $edad = $_POST['edad'];
-        $sexo = $_POST['sexo'];
-
-        if ($sexo === 'femenino' && $edad >= 18 && $edad <= 35) {
-            echo "Bienvenida, usted está en el rango de edad permitido.";
-        } else {
-            echo "Lo siento, no cumple con los requisitos.";
-        }
-    }
-    ?>
-
 
       
     <!-- Optional JavaScript -->
