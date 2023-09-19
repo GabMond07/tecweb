@@ -103,6 +103,20 @@
         <input type="submit" value="Enviar">
     </form>
 
+    <h2>Consulta de Vehículos</h2>
+    <form method="get" action="consulta.php">
+        Consultar por Matrícula: <input type="text" name="matricula">
+        <input type="submit" value="Consultar">
+    </form>
+    <form method="get" action="consulta.php">
+        Mostrar todos los autos registrados:
+        <input type="hidden" name="mostrar_todos" value="1">
+        <input type="submit" value="Mostrar Todos">
+    </form>
+
+
+
+
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

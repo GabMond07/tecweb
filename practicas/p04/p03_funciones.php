@@ -52,14 +52,4 @@ function crearArregloLetras() {
     return $letras;
 }
 
-
-// Función para identificar una persona por edad y sexo
-function identificarPersona($edad, $sexo) {
-    if ($sexo == "femenino" && $edad >= 18 && $edad <= 35) {
-        return "Bienvenida, usted está en el rango de edad permitido.";
-    } else {
-        return "Lo siento, no cumple con los requisitos.";
-    }
-}
-
 ?>
