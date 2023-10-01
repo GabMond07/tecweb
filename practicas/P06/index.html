@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+ 
+        <meta charset="utf-8" >
+        <title>Registro al Concurso</title>
+        <style type="text/css">
+          ol, ul { 
+          list-style-type: none;
+          }
+        </style>
+
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Registro al Concurso &ldquo;Chidos mis Tenis&rdquo;</h1>
+
+    <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Tenis Mike&#169;?<br><br>Justifica el por qué tus tenis se <em>tienen que</em> ir y tú puede ser uno de los diez afortunados ganadores.</p>
+
+    <form action="http://localhost/tecweb_copia/practicas/P06/concurso.php" method="post">
+        <h2>Información de Participación</h2>
+
+      <fieldset>
+        <legend>Información Personal</legend>
+
+        <ul>
+          <li><label for="form-name">Nombre:</label> <input type="text" name="name" id="form-name"></li>
+          <li><label for="form-email">Dirección de E-mail:</label> <input type="email" name="email" id="form-email"></li>
+          <li><label for="form-tel">Número Telefónico:</label> <input type="tel" name="phone" id="form-tel"></li>
+          <li><label for="form-story">Mis tenis son tan feos porque...</label><br><textarea name="story" rows="4" cols="60" id="form-story" placeholder="No más de 300 caracteres de longitud"></textarea></li>
+        </ul>
+      </fieldset>
+
+      <h2>Diseña tus Mike personalizados:</h2>
+
+      <fieldset>
+        <legend>Diseño personalizado del Tenis</legend>
+
+        <fieldset>
+          <legend>Color <em>(escoge uno)</em>:</legend>
+          <ul>
+            <li><label><input type="radio" name="color" value="red"> Rojo</label></li>
+            <li><input type="radio" name="color" value="blue" checked=""> Azul</li>
+            <li><input type="radio" name="color" value="black"> Negro</li>
+            <li><input type="radio" name="color" value="silver"> Plateado</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Características <em>(escoge tatnas como quieras)</em></legend>
+          <ul>
+            <li><input type="checkbox" name="features[]" value="laces"> Cordones Brillantes</li>
+            <li><input type="checkbox" name="features[]" value="logo" checked> Logo Metálico</li>
+            <li><input type="checkbox" name="features[]" value="heels"> Suela Luminosa</li>
+            <li><input type="checkbox" name="features[]" value="mp3"> WiFi-integrado</li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Talla</legend>
+          <p>Las medidas reflejan el estándar masculino: 
+            <select name="size" size="1">
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+            </select>
+          </p>
+        </fieldset>
+
+      </fieldset>
+
+      <p>
+        <input type="submit" value="¡Chidos mis Tenis!">
+        <input type="reset">
+      </p>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
