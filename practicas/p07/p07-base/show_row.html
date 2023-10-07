@@ -21,13 +21,11 @@
                 y que pertenecen a la clase "row-data".
                 */
 
-                var Id= data[0].innerHTML;
-                var nombre= data[1].innerHTML;
-                var Des= data[2].innerHTML;
-                var img = data[3].firstChild.getAttribute('src');
+                var nombre= data[0].innerText;
+                var Des= data[1].innerText;
+                var img = data[2].firstChild.getAttribute('src');
 
-                alert("nombre: " + nombre + "\nDescripción: " + Des + "\nImg: " + img);
-                send2form(nombre, Des);
+                alert("nombre: " + nombre + "\nDescripcion: " + Des + "\nImg: " + img);
             }
 
             
@@ -139,13 +137,5 @@
                 </tr>
             </tbody>
         </table>
-        <script>
-            function send2form(nombre, Des) {     //form) { 
-                var urlForm = "http://localhost/tecweb_copia/practicas/p07/p07-base/formulario.php";
-                var propName = "nombre="+nombre;
-                var propAge = "edad="+Des;
-                window.open(urlForm+"?"+propName+"&"+propAge);
-            }
-        </script>
     </body>
 </html>
