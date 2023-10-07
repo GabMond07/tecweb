@@ -21,11 +21,12 @@
                 y que pertenecen a la clase "row-data".
                 */
 
-                var name = data[0].innerText;
-                var age = data[1].innerText;
-                var img = data[2].firstChild.getAttribute('src');
+                var Id= data[0].innerText;
+                var nombre= data[1].innerText;
+                var Des= data[2].innerText;
+                var img = data[3].firstChild.getAttribute('src');
 
-                alert("Name: " + name + "\nAge: " + age+ "\nImg: " + img);
+                alert("nombre: " + nombre + "\nDescripción: " + Des + "\nImg: " + img);
             }
 
             
@@ -37,8 +38,8 @@
             <tbody>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Age</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descipción</th>
                     <th scope="col">Img</th>
                     <th scope="col">Submit</th>
                 </tr>
