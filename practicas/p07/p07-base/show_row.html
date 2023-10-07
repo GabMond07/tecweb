@@ -21,12 +21,13 @@
                 y que pertenecen a la clase "row-data".
                 */
 
-                var Id= data[0].innerText;
-                var nombre= data[1].innerText;
-                var Des= data[2].innerText;
+                var Id= data[0].innerHTML;
+                var nombre= data[1].innerHTML;
+                var Des= data[2].innerHTML;
                 var img = data[3].firstChild.getAttribute('src');
 
                 alert("nombre: " + nombre + "\nDescripción: " + Des + "\nImg: " + img);
+                send2form(nombre, Des);
             }
 
             
@@ -34,21 +35,22 @@
     </head>
     <body>
         
+        
         <table class="table">
             <tbody>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col">Descipción</th>
+                    <th scope="col">Descipcion</th>
                     <th scope="col">Img</th>
                     <th scope="col">Submit</th>
                 </tr>
 
                 <tr id="1">
                     <th scope="row">1</th>
-                    <td class="row-data">Sara</td>
-                    <td class="row-data">23</td>
-                    <td class="row-data"><img src="img/pantalla.jpg" width="50" height="50"></td>
+                    <td class="row-data">Smartphone Galaxy S21</td>
+                    <td class="row-data">Pantalla AMOLED de 6.2 pulgadas, 128 GB de almacenaminto</td>
+                    <td class="row-data"><img src="img/S21.jpg" width="50" height="50"></td>
                     <td><input type="button" 
                                value="submit" 
                                onclick="show()" /></td>
@@ -56,24 +58,94 @@
 
                 <tr id="2">
                     <th scope="row">2</th>
-                    <td class="row-data">John</td>
-                    <td class="row-data">30</td>
-                    <td class="row-data"><img src="img/pantalla.jpg" width="50" height="50"></td>
+                    <td class="row-data">Laptop ThinkPad X1 Carbon</td>
+                    <td class="row-data">Procesador Intel Core i7, 16 GB de RAM</td>
+                    <td class="row-data"><img src="img/LapCarbon.jpg" width="50" height="50"></td>
                     <td><input type="button" 
                                value="submit" 
                                onclick="show()" /></td>
                 </tr>
-
                 <tr id="3">
                     <th scope="row">3</th>
-                    <td class="row-data">Naman</td>
-                    <td class="row-data">20</td>
-                    <td class="row-data"><img src="img/pantalla.jpg" width="50" height="50"></td>
+                    <td class="row-data">Tablet iPad Pro</td>
+                    <td class="row-data">Pantalla Liquid Retina de 11 pulgadas, 128 GB de almacenamiento</td>
+                    <td class="row-data"><img src="img/TabletPro.jpg" width="50" height="50"></td>
+                    <td><input type="button" 
+                               value="submit" 
+                               onclick="show()" /></td>
+                </tr>
+                <tr id="4">
+                    <th scope="row">4</th>
+                    <td class="row-data">TCamara Mirrorless EOS R5</td>
+                    <td class="row-data">Sensor CMOS de 45 MP, grabacion de video 8K</td>
+                    <td class="row-data"><img src="img/CamaraEOS.jpg" width="50" height="50"></td>
+                    <td><input type="button" 
+                               value="submit" 
+                               onclick="show()" /></td>
+                </tr>
+                <tr id="5">
+                    <th scope="row">5</th>
+                    <td class="row-data">Auriculares Bluetooth WH-1000XM4</td>
+                    <td class="row-data">Cancelacion de ruido, hasta 30 horas de duracion de la bateria</td>
+                    <td class="row-data"><img src="img/AuricularesWH.jpg" width="50" height="50"></td>
+                    <td><input type="button" 
+                               value="submit" 
+                               onclick="show()" /></td>
+                </tr>
+                <tr id="6">
+                    <th scope="row">6</th>
+                    <td class="row-data">Smartwatch Galaxy Watch 4</td>
+                    <td class="row-data">Pantalla AMOLED de 1.4 pulgadas, seguimiento de actividad</td>
+                    <td class="row-data"><img src="img/Samartwatch.jpg" width="50" height="50"></td>
+                    <td><input type="button" 
+                               value="submit" 
+                               onclick="show()" /></td>
+                </tr>
+                <tr id="7">
+                    <th scope="row">7</th>
+                    <td class="row-data">Impresora LaserJet Pro M404n</td>
+                    <td class="row-data">Impresion en blanco y negro de alta velocidad</td>
+                    <td class="row-data"><img src="img/Impresora.jpg" width="50" height="50"></td>
+                    <td><input type="button" 
+                               value="submit" 
+                               onclick="show()" /></td>
+                </tr>
+                <tr id="8">
+                    <th scope="row">8</th>
+                    <td class="row-data">Router WiFi Mesh Deco X20</td>
+                    <td class="row-data">Cobertura WiFi en toda la casa, hasta 2000 Mbps</td>
+                    <td class="row-data"><img src="img/Router.jpg" width="50" height="50"></td>
+                    <td><input type="button" 
+                               value="submit" 
+                               onclick="show()" /></td>
+                </tr>
+                <tr id="9">
+                    <th scope="row">9</th>
+                    <td class="row-data">Monitor Ultrawide 34WN80C-B</td>
+                    <td class="row-data">Pantalla IPS de 34 pulgadas, resolucion 3440x1440</td>
+                    <td class="row-data"><img src="img/LGMonitor.jpg" width="50" height="50"></td>
+                    <td><input type="button" 
+                               value="submit" 
+                               onclick="show()" /></td>
+                </tr>
+                <tr id="10">
+                    <th scope="row">10</th>
+                    <td class="row-data">Teclado Mecanico BlackWidow Elite</td>
+                    <td class="row-data">Teclas mecanicas Razer Green, retroiluminacion personalizable</td>
+                    <td class="row-data"><img src="img/Teclado.jpg" width="50" height="50"></td>
                     <td><input type="button" 
                                value="submit" 
                                onclick="show()" /></td>
                 </tr>
             </tbody>
         </table>
+        <script>
+            function send2form(nombre, Des) {     //form) { 
+                var urlForm = "http://localhost/tecweb_copia/practicas/p07/p07-base/formulario.php";
+                var propName = "nombre="+nombre;
+                var propAge = "edad="+Des;
+                window.open(urlForm+"?"+propName+"&"+propAge);
+            }
+        </script>
     </body>
 </html>
