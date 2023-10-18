@@ -27,38 +27,50 @@ function buscarID(e) {
     client.onreadystatechange = function () {
         // SE VERIFICA SI LA RESPUESTA ESTÁ LISTA Y FUE SATISFACTORIA
         if (client.readyState == 4 && client.status == 200) {
-            console.log('[CLIENTE]\n'+client.responseText);
-            
-            // SE OBTIENE EL OBJETO DE DATOS A PARTIR DE UN STRING JSON
-            let productos = JSON.parse(client.responseText);    // similar a eval('('+client.responseText+')');
-            
-            // SE VERIFICA SI EL OBJETO JSON TIENE DATOS
-            if(Object.keys(productos).length > 0) {
-                // SE CREA UNA LISTA HTML CON LA DESCRIPCIÓN DEL PRODUCTO
-                let descripcion = '';
-                    descripcion += '<li>precio: '+productos.precio+'</li>';
-                    descripcion += '<li>unidades: '+productos.unidades+'</li>';
-                    descripcion += '<li>modelo: '+productos.modelo+'</li>';
-                    descripcion += '<li>marca: '+productos.marca+'</li>';
-                    descripcion += '<li>detalles: '+productos.detalles+'</li>';
-                
-                // SE CREA UNA PLANTILLA PARA CREAR LA(S) FILA(S) A INSERTAR EN EL DOCUMENTO HTML
-                let template = '';
+            console.log('[CLIENTE]\n' + client.responseText);
+        
+            // SE OBTIENE EL ARREGLO DE OBJETOS DE DATOS A PARTIR DE UN STRING JSON
+            let productos = JSON.parse(client.responseText);
+        
+            // SE VERIFICA SI EL ARREGLO TIENE DATOS
+            if (productos.length > 0) {
+                let template = '<table border="1"><tr><th>ID</th><th>Nombre</th><th>Detalles</th></tr>';
+        
+                productos.forEach(function (producto) {
+                    let descripcion = '';
+                    descripcion += '<li>precio: ' + producto.precio + '</li>';
+                    descripcion += '<li>unidades: ' + producto.unidades + '</li>';
+                    descripcion += '<li>modelo: ' + producto.modelo + '</li>';
+                    descripcion += '<li>marca: ' + producto.marca + '</li>';
+                    descripcion += '<li>detalles: ' + producto.detalles + '</li>';
+        
                     template += `
                         <tr>
-                            <td>${productos.id}</td>
-                            <td>${productos.nombre}</td>
+                            <td>${producto.id}</td>
+                            <td>${producto.nombre}</td>
                             <td><ul>${descripcion}</ul></td>
                         </tr>
                     `;
-
+                });
+        
+                template += '</table>';
+        
                 // SE INSERTA LA PLANTILLA EN EL ELEMENTO CON ID "productos"
                 document.getElementById("productos").innerHTML = template;
+            } else {
+                // No se encontraron productos
+                document.getElementById("productos").innerHTML = "No se encontraron productos.";
             }
         }
+        
+        
+        
     };
     client.send("id="+id);
 }
+
+
+
 
 // FUNCIÓN CALLBACK DE BOTÓN "Agregar Producto"
 function agregarProducto(e) {
