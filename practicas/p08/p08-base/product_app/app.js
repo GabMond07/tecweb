@@ -32,19 +32,49 @@ function buscarID(e) {
             // SE OBTIENE EL OBJETO DE DATOS A PARTIR DE UN STRING JSON
             let productos = JSON.parse(client.responseText);    // similar a eval('('+client.responseText+')');
             let template = '';
-            for(var i=0; i<productos.length; i++ ){
+            for(var i=0; i<=productos.length; i++ ){
             // SE VERIFICA SI EL OBJETO JSON TIENE DATOS
            if(Object.keys(productos).length > 0) {
                 // SE CREA UNA LISTA HTML CON LA DESCRIPCIÓN DEL PRODUCTO
                 let descripcion = '';
-                    descripcion += '<li>precio: '+productos[i].precio+'</li>';
-                    descripcion += '<li>unidades: '+productos[i].unidades+'</li>';
-                    descripcion += '<li>modelo: '+productos[i].modelo+'</li>';
-                    descripcion += '<li>marca: '+productos[i].marca+'</li>';
-                    descripcion += '<li>detalles: '+productos[i].detalles+'</li>';
-                
+                //    descripcion += '<li>precio: ' + productos[i].precio + '</li>';
+                //    descripcion += '<li>unidades: '+productos[i].unidades+'</li>';
+                if (productos[i]) {
+                    if (productos[i].precio) {
+                        descripcion += '<li>precio: ' + productos[i].precio + '</li>';
+                      } else {
+                        descripcion += '<li>precio: No disponible</li>';
+                      }
+                      if (productos[i].unidades) {
+                        descripcion += '<li>unidades: ' + productos[i].unidades + '</li>';
+                      } else {
+                        descripcion += '<li>unidades: No disponible</li>';
+                      }
+                    if (productos[i].modelo) {
+                      descripcion += '<li>modelo: ' + productos[i].modelo + '</li>';
+                    } else {
+                      descripcion += '<li>modelo: No disponible</li>';
+                    }
+                  
+                    if (productos[i].marca) {
+                      descripcion += '<li>marca: ' + productos[i].marca + '</li>';
+                    } else {
+                      descripcion += '<li>marca: No disponible</li>';
+                    }
+                  
+                    if (productos[i].detalles) {
+                      descripcion += '<li>detalles: ' + productos[i].detalles + '</li>';
+                    } else {
+                      descripcion += '<li>detalles: No disponibles</li>';
+                    }
+                  } else {
+                    descripcion += '<li>Producto no disponible</li>';
+                  }
+                  
+                  
                 // SE CREA UNA PLANTILLA PARA CREAR LA(S) FILA(S) A INSERTAR EN EL DOCUMENTO HTML
                     template += `
+                    
                         <tr>
                             <td>${productos[i].id}</td>
                             <td>${productos[i].nombre}</td>
@@ -72,24 +102,30 @@ function agregarProducto(e) {
 
     if(finalJSON.precio  < 99.99 ){
         alert('Introduce un precio mayor a 99.99');
+        return;
     }
-    parseInt(finalJSON["unidades"]);
 
+    parseInt(finalJSON["unidades"]);
    if(finalJSON.unidades <= 0 ){
     alert('Debe ingresar al menos una unidad');
+    return;
     }
     
     if(finalJSON.modelo == ''){
         alert('Introduce un modelo');
+        return;
     }
     if(finalJSON.marca == ''){
         alert('Introduce una marca');
+        return;
     }
     if(finalJSON.detalles.length > 250){
         alert('Ingresa detalles con menos de 250 caracteres');
+        return;
     }
-    if(finalJSON.imagen == ''){
+    if(finalJSON.imagen == 'img/default.png'){
         finalJSON['imagen'] = 'img/imagen.png';
+        return;
     }
     // SE AGREGA AL JSON EL NOMBRE DEL PRODUCTO
     finalJSON['nombre'] = document.getElementById('name').value;

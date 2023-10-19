@@ -20,7 +20,7 @@
             echo "ESTE PRODUCTO YA EXISTE";   
         }
         else {  if ( $result = $conexion->query("INSERT INTO productos VALUES (NULL, '{$nombreobj}', '{$marcaobj}', '{$modeloobj}', '{$precioobj}', '{$detallesobj}', '{$unidadesobj}', '{$imagenobj}', '0')") ) {
-                echo "ESTE PRODUCTO FUE INSERTADO CORRECTAMENTE ";   }
+                echo "ESTE PRODUCTO FUE INSERTADO CORRECTAMENTE";   }
         else { die('Query Error: '.mysqli_error($conexion));
                 echo "ESTE PRODUCTO NO  FUE INSERTADO";             }
         } $conexion->close();
