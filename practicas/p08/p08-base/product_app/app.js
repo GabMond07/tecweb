@@ -6,7 +6,7 @@ var baseJSON = {
     "marca": "NA",
     "detalles": "NA",
     "imagen": "img/default.png"
-  };
+};
 
 // FUNCIÓN CALLBACK DE BOTÓN "Buscar"
 function buscarID(e) {
@@ -27,50 +27,39 @@ function buscarID(e) {
     client.onreadystatechange = function () {
         // SE VERIFICA SI LA RESPUESTA ESTÁ LISTA Y FUE SATISFACTORIA
         if (client.readyState == 4 && client.status == 200) {
-            console.log('[CLIENTE]\n' + client.responseText);
-        
-            // SE OBTIENE EL ARREGLO DE OBJETOS DE DATOS A PARTIR DE UN STRING JSON
-            let productos = JSON.parse(client.responseText);
-        
-            // SE VERIFICA SI EL ARREGLO TIENE DATOS
-            if (productos.length > 0) {
-                let template = '<table border="1"><tr><th>ID</th><th>Nombre</th><th>Detalles</th></tr>';
-        
-                productos.forEach(function (producto) {
-                    let descripcion = '';
-                    descripcion += '<li>precio: ' + producto.precio + '</li>';
-                    descripcion += '<li>unidades: ' + producto.unidades + '</li>';
-                    descripcion += '<li>modelo: ' + producto.modelo + '</li>';
-                    descripcion += '<li>marca: ' + producto.marca + '</li>';
-                    descripcion += '<li>detalles: ' + producto.detalles + '</li>';
-        
+            console.log('[CLIENTE]\n'+client.responseText);
+            
+            // SE OBTIENE EL OBJETO DE DATOS A PARTIR DE UN STRING JSON
+            let productos = JSON.parse(client.responseText);    // similar a eval('('+client.responseText+')');
+            let template = '';
+            for(var i=0; i<productos.length; i++ ){
+            // SE VERIFICA SI EL OBJETO JSON TIENE DATOS
+           if(Object.keys(productos).length > 0) {
+                // SE CREA UNA LISTA HTML CON LA DESCRIPCIÓN DEL PRODUCTO
+                let descripcion = '';
+                    descripcion += '<li>precio: '+productos[i].precio+'</li>';
+                    descripcion += '<li>unidades: '+productos[i].unidades+'</li>';
+                    descripcion += '<li>modelo: '+productos[i].modelo+'</li>';
+                    descripcion += '<li>marca: '+productos[i].marca+'</li>';
+                    descripcion += '<li>detalles: '+productos[i].detalles+'</li>';
+                
+                // SE CREA UNA PLANTILLA PARA CREAR LA(S) FILA(S) A INSERTAR EN EL DOCUMENTO HTML
                     template += `
                         <tr>
-                            <td>${producto.id}</td>
-                            <td>${producto.nombre}</td>
+                            <td>${productos[i].id}</td>
+                            <td>${productos[i].nombre}</td>
                             <td><ul>${descripcion}</ul></td>
                         </tr>
                     `;
-                });
-        
-                template += '</table>';
-        
+
                 // SE INSERTA LA PLANTILLA EN EL ELEMENTO CON ID "productos"
                 document.getElementById("productos").innerHTML = template;
-            } else {
-                // No se encontraron productos
-                document.getElementById("productos").innerHTML = "No se encontraron productos.";
             }
         }
-        
-        
-        
+        }
     };
     client.send("id="+id);
 }
-
-
-
 
 // FUNCIÓN CALLBACK DE BOTÓN "Agregar Producto"
 function agregarProducto(e) {
@@ -80,6 +69,28 @@ function agregarProducto(e) {
     var productoJsonString = document.getElementById('description').value;
     // SE CONVIERTE EL JSON DE STRING A OBJETO
     var finalJSON = JSON.parse(productoJsonString);
+
+    if(finalJSON.precio  < 99.99 ){
+        alert('Introduce un precio mayor a 99.99');
+    }
+    parseInt(finalJSON["unidades"]);
+
+   if(finalJSON.unidades <= 0 ){
+    alert('Debe ingresar al menos una unidad');
+    }
+    
+    if(finalJSON.modelo == ''){
+        alert('Introduce un modelo');
+    }
+    if(finalJSON.marca == ''){
+        alert('Introduce una marca');
+    }
+    if(finalJSON.detalles.length > 250){
+        alert('Ingresa detalles con menos de 250 caracteres');
+    }
+    if(finalJSON.imagen == ''){
+        finalJSON['imagen'] = 'img/imagen.png';
+    }
     // SE AGREGA AL JSON EL NOMBRE DEL PRODUCTO
     finalJSON['nombre'] = document.getElementById('name').value;
     // SE OBTIENE EL STRING DEL JSON FINAL
@@ -93,6 +104,11 @@ function agregarProducto(e) {
         // SE VERIFICA SI LA RESPUESTA ESTÁ LISTA Y FUE SATISFACTORIA
         if (client.readyState == 4 && client.status == 200) {
             console.log(client.responseText);
+            if(client.responseText === 'ESTE PRODUCTO FUE INSERTADO CORRECTAMENTE'){
+                alert('producto insertado correctamente');
+            }else{
+                alert('' + client.responseText);
+            }
         }
     };
     client.send(productoJsonString);
