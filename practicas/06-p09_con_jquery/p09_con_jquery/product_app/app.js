@@ -232,21 +232,40 @@ $(document).ready(function() {
       }
     });
   
-    $(document).on('click', '.product-item', (e) => {
-      const element = $(this)[0].activeElement.parentElement.parentElement;
-      const id = $(element).attr('productId');
-      $.post('./backend/product-single.php', { id }, (response) => {
-        let product = JSON.parse(response);
-        $('#name').val(product.nombre);
-        $('#productId').val(product.id);
-        delete(product.nombre);
-        delete(product.eliminado);
-        delete(product.id);
-        let JsonString = JSON.stringify(product, null, 2);
-        $('#description').val(JsonString);
-        edit = true;
-      });
-      e.preventDefault();
+    $(document).on('click', '.product-item', function () {
+        let element = $(this)[0].parentElement.parentElement;
+        let id = $(element).attr('productId');
+        //console.log(id);
+
+        $.post('backend/product-single.php', { id }, function (response) {
+            const producto = JSON.parse(response);
+
+           // console.log(response);
+            $('#name').val(producto.nombre);
+            $('#price').val(producto.precio);
+            $('#units').val(producto.unidades);
+            $('#model').val(producto.modelo);
+            $('#brand').val(producto.marca);
+            $('#details').val(producto.detalles);
+            $('#image').val(producto.imagen);
+
+
+
+            $('#productId').val(producto.id);
+
+            var atributosobj = {
+                "precio": producto.precio,
+                "unidades": producto.unidades,
+                "modelo": producto.modelo,
+                "marca": producto.marca,
+                "detalles": producto.detalles,
+                "imagen": producto.imagen
+            };
+
+            var objstring = JSON.stringify(atributosobj, null, 2);
+            $('#description').val(objstring);
+            edit = true;
+        })
     });
   });
   
