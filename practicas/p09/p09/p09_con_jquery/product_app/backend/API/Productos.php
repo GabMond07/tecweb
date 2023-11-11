@@ -8,17 +8,12 @@ class Producto extends DataBase {
     public function __construct($nameBD = 'marketzone') {
         parent::__construct($nameBD);
 
-        $result = $this->conexion->query('SELECT * FROM Productos');
-        if ($result) {
-            $this->response = $result->fetch_all(MYSQLI_ASSOC);
-            $result->free();
-        } else {
             $this->response = array();
-        }
+        
     }
 
     public function getResponse() {
-        return json_encode($this->response);
+        return json_encode($this->response,JSON_PRETTY_PRINT);
     }
 
     public function add($producto) {
@@ -50,6 +45,8 @@ class Producto extends DataBase {
                 $result->free();
             }
         }
+
+        $this->conexion->close();
         // SE HACE LA CONVERSIÓN DE ARRAY A JSON
         echo json_encode($data, JSON_PRETTY_PRINT);
     }
