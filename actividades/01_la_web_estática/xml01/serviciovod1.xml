@@ -1,0 +1,95 @@
+<catalogoVOD>
+    <cuenta>
+        <correo>gabcam071118.rg@gmail.com</correo>
+        <perfiles> 
+            <perfil>
+                <usuario>Gabriel Romero Luna </usuario>
+                <idioma>Español</idioma>
+                <usuario>Jonathan Palacios</usuario>
+                <idioma>Español</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero>
+                <nombre>Accion</nombre>
+                <titulo>
+                    <nombre>Soy leyenda</nombre>
+                    <duracion>2 hrs 30min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Rapidos y furiosos</nombre>
+                    <duracion>3hrs 14min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>John Wick</nombre>
+                    <duracion>2 hrs 40min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Contrareloj</nombre>
+                    <duracion>3hrs 10min</duracion>
+                </titulo>
+            </genero> 
+            <genero>
+                <nombre>Romance</nombre>
+                <titulo>
+                    <nombre>Cuestion de tiempo</nombre>
+                    <duracion>3 hrs 30min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Culpa mia</nombre>
+                    <duracion>2hrs 30min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Elementos</nombre>
+                    <duracion>3 hrs 21min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Ghost</nombre>
+                    <duracion>3 hrs 370min</duracion>
+                </titulo>
+            </genero> 
+        </peliculas>
+        <programas>
+            <genero>
+                <nombre>Comedia</nombre>
+                <titulo>
+                    <nombre>Teoría del Big Bang</nombre>
+                    <duracion>11 temporadas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>El oso</nombre>
+                    <duracion>5 temporadas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>BoJack Horserman</nombre>
+                    <duracion>8 temporadas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>40 y 20</nombre>
+                    <duracion>4 temporadas</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Infantil</nombre>
+                <titulo>
+                    <nombre>Bob esponja</nombre>
+                    <duracion>10 temporadas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>La CQ</nombre>
+                    <duracion>14 temporadas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>¡Carly</nombre>
+                    <duracion>18 temporadas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Art Attack</nombre>
+                    <duracion>5 temporadas</duracion>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</catalogoVOD>

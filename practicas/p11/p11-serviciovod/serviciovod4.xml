@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CatalogoVOD SYSTEM "serviciovod_ep.dtd">
+<CatalogoVOD>
+    <cuenta correo="gabcam071118.rg@gmail.com">
+        <perfiles>
+            <perfil usuario="Gabriel Romero" idioma="Español"/>
+            <perfil usuario="Juan" idioma="Español"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas region="USA">
+            <genero nombre="Accion">
+                <titulo duracion="2:30">ETERNALS</titulo>
+                <titulo duracion="2:50">IRON MAN</titulo>
+            </genero>
+            <genero nombre="Romance">
+                <titulo duracion="2:00">A dos metros de ti</titulo>
+                <titulo duracion="2:00">Yo antes de ti</titulo>
+            </genero>
+        </peliculas>
+        <series region="MEX">
+            <genero nombre="Comedia">
+                <titulo duracion="1:00">La casa de las flores</titulo>
+                <titulo duracion="1:00">Heroes del norte</titulo>
+            </genero>
+            <genero nombre="Accion">
+                <titulo duracion="1:00">La reina del Sur</titulo>
+                <titulo duracion="1:00">Narcos</titulo>
+            </genero>
+        </series>
+    </contenido>
+</CatalogoVOD>

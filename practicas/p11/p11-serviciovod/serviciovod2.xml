@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CatalogoVOD SYSTEM "serviciovod.dtd">
+<CatalogoVOD>
+    <cuenta correo="gabriel.romerol@alumno.buap.mx">
+        <perfiles>
+            <perfil usuario="Gabriel" idioma="Español"/>
+            <perfil usuario="Cris" idioma="Español"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Accion">
+                <titulo duracion="2:30">ETERNALS</titulo>
+                <titulo duracion="2:50">IRON MAN</titulo>
+            </genero>
+            <genero nombre="Romance">
+                <titulo duracion="2:00">A dos metros de ti</titulo>
+                <titulo duracion="2:00">Yo antes de ti</titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Comedia">
+                <titulo duracion="1:00">Me caigo de risa</titulo>
+                <titulo duracion="1:00">La teoria del Big Bang</titulo>
+            </genero>
+            <genero nombre="Informativo">
+                <titulo duracion="1:00">National Geografic</titulo>
+                <titulo duracion="1:00">Animal Planet</titulo>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>

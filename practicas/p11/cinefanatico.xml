@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+<cinefanatico>
+    <tarjeta noserie="123456" visitas="" puntos="1000">
+        <nombre>Gabriel Romero Luna</nombre>
+        <correo>gabriel.romerol@alumno.buap.mx</correo>
+        <telefono tipo="movil">2224563131</telefono>
+    </tarjeta>
+    <tarjeta noserie="56789" visitas="5" puntos="150">
+        <nombre>Juan Carlos Conde Ramirez</nombre>
+        <correo>carlos.conder@correo.buap.mx</correo>
+    </tarjeta>
+</cinefanatico>

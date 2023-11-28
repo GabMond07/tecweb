@@ -1,0 +1,38 @@
+<catalogoVOD>
+    <cuenta correo="gabcam071118.rg@gmail.com">
+        <perfiles>
+            <perfil usuario="Gabriel Romero Luna" idioma="Español" />
+            <perfil usuario="Jonathan Palacios" idioma="Español" />
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Accion">
+                <titulo nombre="Soy leyenda" duracion="2 hrs 30min" />
+                <titulo nombre="Rapidos y furiosos" duracion="3hrs 14min" />
+                <titulo nombre="John Wick" duracion="2 hrs 40min" />
+                <titulo nombre="Contrareloj" duracion="3hrs 10min" />
+            </genero>
+            <genero nombre="Romance">
+                <titulo nombre="Cuestion de tiempo" duracion="3 hrs 30min" />
+                <titulo nombre="Culpa mia" duracion="2hrs 30min" />
+                <titulo nombre="Elementos" duracion="3 hrs 21min" />
+                <titulo nombre="Ghost" duracion="3 hrs 370min" />
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Comedia">
+                <titulo nombre="Teoría del Big Bang" duracion="11 temporadas" />
+                <titulo nombre="El oso" duracion="5 temporadas" />
+                <titulo nombre="BoJack Horserman" duracion="8 temporadas" />
+                <titulo nombre="40 y 20" duracion="4 temporadas" />
+            </genero>
+            <genero nombre="Infantil">
+                <titulo nombre="Bob esponja" duracion="10 temporadas" />
+                <titulo nombre="La CQ" duracion="14 temporadas" />
+                <titulo nombre="¡Carly" duracion="18 temporadas" />
+                <titulo nombre="Art Attack" duracion="5 temporadas" />
+            </genero>
+        </programas>
+    </contenido>
+</catalogoVOD>
