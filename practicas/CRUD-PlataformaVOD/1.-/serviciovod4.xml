@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="catalogovod.xsl" type="text/xsl"?>
+<!--<!DOCTYPE CatalogoVOD SYSTEM "serviciovod_ep.dtd">-->
+<CatalogoVOD Version=".01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://starfire.com/vod serviciovod_ns_vod.xsd http://starfire.com/vod/menu serviciovod_ns_menu.xsd">
+    <cuenta correo="yfyfjyj71118.rg@gmail.com">
+        <perfiles>
+            <perfil usuario="GabMond" idioma="Español" />
+            <perfil usuario="Alfred" idioma="Español" />
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas tipo="Peliculas" region="USA">
+            <genero nombre="Super Héroes">
+                <titulo duracion="2:37 min">Los vengadores</titulo>
+                <titulo duracion="2:04 min">El caballero de la noche</titulo>
+            </genero>
+            <genero nombre="Animadas">
+                <titulo duracion="1:40 min">El comandante</titulo>
+                <titulo duracion="1:47 min">Shrek</titulo>
+            </genero>
+        </peliculas>
+        <series tipo="Series" region="USA">
+            <genero nombre="Comedia">
+                <titulo duracion="11 Temporadas 0:30 cap">The big bang theory</titulo>
+                <titulo duracion="14 Temporadas 0:40 cap">Malcolm in the middle</titulo> 
+            </genero>
+            <genero nombre="Suspenso">
+                <titulo duracion="10 Temporadas">Stranger Things</titulo>
+                <titulo duracion="8 Temporadas">Alone</titulo>
+            </genero>
+            <genero nombre="Drama">
+                <titulo duracion="10 Temporadas">Casa de papel</titulo>
+                <titulo duracion="8 Temporadas">Solo</titulo>
+            </genero>
+        </series>
+</contenido>
+</CatalogoVOD>

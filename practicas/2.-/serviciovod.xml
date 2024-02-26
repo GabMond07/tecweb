@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CatalogoVOD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="serviciovod.xsd" Version="4.1">
+    
+     <cuenta correo="gabcam071118.rg@gmail.com">
+        <perfiles>
+            <perfil usuario="Juan" idioma="Español"/>
+            <perfil usuario="Ixchel" idioma="Español"/>
+        <perfil usuario="Xiaomi" idioma="Español"/><perfil usuario="Xiaomi" idioma="Español"/><perfil usuario="" idioma=""/><perfil usuario="" idioma=""/><perfil usuario="" idioma=""/><perfil usuario="" idioma=""/><perfil usuario="" idioma=""/></perfiles>
+    </cuenta>
+
+    <contenido>
+        <peliculas region="MEX">
+            <genero nombre="Super Héroes">
+                <titulo duracion="2:37">ETERNALS</titulo>
+                <titulo duracion="2:04">CAPITAN AMÉRICA, EL 1ER VENGADOR</titulo>
+            </genero>
+            <genero nombre="Animadas">
+                <titulo duracion="1:40">RED</titulo>
+                <titulo duracion="1:47">RAYA</titulo>
+            </genero>
+        <genero nombre="Accion"><titulo duracion="2:30">Rapidos y Furiosos X</titulo><titulo duracion="1:40">Busqueda Imparable</titulo></genero><genero nombre="Accion"><titulo duracion="2:30">Rapidos y Furiosos X</titulo><titulo duracion="1:40">Busqueda Imparable</titulo></genero><genero nombre=""><titulo duracion=""/><titulo duracion=""/></genero><genero nombre=""><titulo duracion=""/><titulo duracion=""/></genero><genero nombre=""><titulo duracion=""/><titulo duracion=""/></genero><genero nombre=""><titulo duracion=""/><titulo duracion=""/></genero><genero nombre=""><titulo duracion=""></titulo><titulo duracion=""></titulo></genero></peliculas>
+        <series region="USA">
+            <genero nombre="Comedia">
+                <titulo duracion="0:30">FRIENDS</titulo>
+                <titulo duracion="0:40">HOW I MEET YOUR MOTHER</titulo>
+            </genero>
+            <genero nombre="Suspenso">
+                <titulo duracion="0:30">Stranger Things</titulo>
+                <titulo duracion="0:45">Criminal Minds</titulo>
+            </genero>
+        <genero nombre="Ciencia Ficcion"><titulo duracion="1:00">Wanda Vision</titulo><titulo duracion="1:00">Smallville </titulo></genero><genero nombre="Ciencia Ficcion"><titulo duracion="1:00">Wanda Vision</titulo><titulo duracion="1:00">Smallville </titulo></genero><genero nombre=""><titulo duracion=""/><titulo duracion=""/></genero><genero nombre=""><titulo duracion=""/><titulo duracion=""/></genero><genero nombre=""><titulo duracion=""/><titulo duracion=""/></genero><genero nombre=""><titulo duracion=""/><titulo duracion=""/></genero><genero nombre=""><titulo duracion=""></titulo><titulo duracion=""></titulo></genero></series>
+    </contenido>
+    
+</CatalogoVOD>

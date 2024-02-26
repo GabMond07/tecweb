@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="catalogovod.xsl" type="text/xsl"?>
+<!DOCTYPE CatalogoVOD SYSTEM "serviciovod_ep.dtd">
+<CatalogoVOD>
+    <cuenta correo="gabcam071118.rg@gmail.com">
+        <perfiles>
+            <perfil usuario="GabMond" idioma="Español"/>
+            <perfil usuario="Alfred" idioma="Español"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas region="MEX">
+            <genero nombre="Super Héroes">
+                <titulo duracion="2:37 min">Los vengadores</titulo>
+                <titulo duracion="2:04 min">El caballero de la noche</titulo>
+            </genero>
+            <genero nombre="Animadas">
+                <titulo duracion="1:40 min">El comandante</titulo>
+                <titulo duracion="1:47 min">Shrek</titulo>
+            </genero>
+        </peliculas>
+        <series region="USA">
+            <genero nombre="Comedia">
+                <titulo duracion="11 Temporadas 0:30 cap">The big bang theory</titulo>
+                <titulo duracion="14 Temporadas 0:40 cap">Malcom in the middle</titulo>
+            </genero>
+            <genero nombre="Suspenso">
+                <titulo duracion="10 Temporadas">Stranger Things</titulo>
+                <titulo duracion="8 Temporadas">Alone</titulo>
+            </genero>
+        </series>
+    </contenido>
+</CatalogoVOD>
